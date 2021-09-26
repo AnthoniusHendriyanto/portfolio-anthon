@@ -1,16 +1,19 @@
 import React, { Component } from "react";
-import { Container, Nav, Navbar} from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 export default class NavbarComp extends Component {
   render() {
     return (
-      <div>
-        <Navbar bg="dark" variant="dark" expand={'sm'}>
+      <>
+        <Navbar bg="dark" variant="dark" expand={"sm"}>
+          {/* Dalam Container Supaya Rapi ga minggir banget. */}
           <Container>
+            {/* Untuk Logo */}
             <Navbar.Brand href="/">Portfolio Anthon</Navbar.Brand>
-            <Navbar.Toggle aria-controls="offcanvasNavbar" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
+            {/* Toogle Untuk saat di kecilin. */}
+            <Navbar.Toggle />
+            <Navbar.Collapse>
+              <Nav className="justify-content-center">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#experience">Experience</Nav.Link>
                 <Nav.Link href="#contact">Contact</Nav.Link>
@@ -18,7 +21,7 @@ export default class NavbarComp extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-      </div>
+      </>
     );
   }
 }
